@@ -33,8 +33,8 @@ const Main = (props) => {
             </main>
             <aside class="overflow-hidden">
                 <section class="relative cards p-2 flex-nowrap rounded-xl max-w-full w-full">
-                    <h2>Aproveite:</h2>
-                    <div class="flex items-center flex-row slide p-2 max-w-full">
+                    {/* <h2>Aproveite:</h2> */}
+                    <div class="flex items-center flex-row slide rounded-xl p-2 max-w-full">
                         <img class="h-32 md:h-48 lg:h-80 ease-in-out duration-300 mx-2 rounded-lg" src="./imgs/banner5.png" alt="" />
                         <img class="h-32 md:h-48 lg:h-80 ease-in-out duration-300 mx-2 rounded-lg" src="./imgs/banner3.png" alt="" />
                         <img class="h-32 md:h-48 lg:h-80 ease-in-out duration-300 mx-2 rounded-lg" src="./imgs/banner1.png" alt="" />
