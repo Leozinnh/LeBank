@@ -1,0 +1,20 @@
+footer {
+    height: 8%;
+    /* background-color: rgba(153, 0, 255, 0.363); */
+}
+
+footer ul {
+    background-color: #242424;
+    -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, .3)) !important;
+}
+
+footer ul li {
+    cursor: pointer;
+    opacity: .7;
+}
+
+footer ul li.active {
+    opacity: 1;
+    border-radius: .4rem;
+    border-bottom: 2pt solid #ffff00;
+}

@@ -1,0 +1,55 @@
+header {
+    height: 20%;
+    background-color: rgba(255, 0, 0, 0.363);
+    -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, .3)) !important;
+}
+
+header div:nth-child(2) ul li {
+    cursor: pointer;
+}
+
+nav {
+    height: 20%;
+    background-color: rgba(255, 166, 0, 0.363);
+}
+
+nav ul {
+    overflow: auto;
+}
+
+nav ul li {
+    min-width: 100px;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    font-size: 10pt;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+nav ul li i {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 20pt !important;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 4pt;
+    background-image: linear-gradient(to bottom, rgba(60, 60, 61, .7), rgba(57, 58, 58, .7), rgba(56, 56, 57, .7));
+    -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, .5)) !important;
+    border-radius: .3rem;
+}
+
+nav ul li i::before {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
