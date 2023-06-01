@@ -35,9 +35,11 @@ const Main = (props) => {
                 <section class="relative cards p-2 flex-nowrap rounded-xl max-w-full w-full">
                     <h2>Aproveite:</h2>
                     <div class="flex items-center flex-row slide p-2 max-w-full">
-                        <img class="w-48 mx-2 rounded-lg" src="./imgs/phone.png" alt="" />
-                        <img class="w-48 mx-2 rounded-lg" src="./imgs/slogan.png" alt="" />
-                        <img class="h-48 mx-2 rounded-lg" src="./imgs/background2.png" alt="" />
+                        <img class="h-80 mx-2 rounded-lg" src="./imgs/banner5.png" alt="" />
+                        <img class="h-80 mx-2 rounded-lg" src="./imgs/banner3.png" alt="" />
+                        <img class="h-80 mx-2 rounded-lg" src="./imgs/banner1.png" alt="" />
+                        <img class="h-80 mx-2 rounded-lg" src="./imgs/banner2.png" alt="" />
+                        <img class="h-80 mx-2 rounded-lg" src="./imgs/banner4.png" alt="" />
                     </div>
                 </section>
             </aside>
