@@ -33,8 +33,8 @@ const Header = (props) => {
                     </ul>
                 </div>
             </header>
-            <nav className="relative px-2 py-1 flex justify-between items-center flex-wrap w-full">
-                <ul className="relative flex justify-center items-center flex-row flex-wrap w-full">
+            <nav className="relative px-2 py-1 flex lg:justify-between items-center lg:flex-wrap w-full ease-in-out duration-300">
+                <ul className="relative flex lg:justify-center items-center flex-row w-full ease-in-out duration-300">
                     <li>
                         <i className="fa fa-print" aria-hidden="true"></i>
                         Extrato

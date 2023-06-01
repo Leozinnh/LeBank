@@ -1,10 +1,10 @@
 main {
     min-height: 60%;
-    background-color: rgba(30, 255, 0, 0.363);
+    /* background-color: rgba(30, 255, 0, 0.363); */
 }
 
 main section.money {
-    background-color: rgba(0, 255, 221, 0.363);
+    /* background-color: rgba(0, 255, 221, 0.363); */
     -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, .2)) !important;
 }
 
@@ -71,7 +71,7 @@ main section.money .footer {
 }
 
 aside {
-    background-color: rgba(0, 132, 255, 0.363);
+    /* background-color: rgba(0, 132, 255, 0.363); */
 }
 
 

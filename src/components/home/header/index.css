@@ -1,6 +1,6 @@
 header {
     height: 20%;
-    background-color: rgba(255, 0, 0, 0.363);
+    /* background-color: rgba(255, 0, 0, 0.363); */
     -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, .3)) !important;
 }
 
@@ -10,7 +10,7 @@ header div:nth-child(2) ul li {
 
 nav {
     height: 20%;
-    background-color: rgba(255, 166, 0, 0.363);
+    /* background-color: rgba(255, 166, 0, 0.363); */
 }
 
 nav ul {
