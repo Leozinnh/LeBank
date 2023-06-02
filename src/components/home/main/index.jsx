@@ -83,7 +83,7 @@ const Main = (props) => {
                 </section>
             </main>
             <aside class="overflow-hidden">
-                <section class="relative cards flex-nowrap rounded-xl max-w-full w-full">
+                <section class="relative px-4 cards flex-nowrap rounded-xl max-w-full w-full">
                     {/* <h2>Aproveite:</h2> */}
                     <div class="flex items-center flex-row slide rounded-xl py-2 max-w-full">
                         <img class="h-32 md:h-48 lg:h-80 ease-in-out duration-300 mx-2 rounded-lg" src="./imgs/banner5.png" alt="" />

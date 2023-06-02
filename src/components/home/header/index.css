@@ -8,8 +8,19 @@ header div:nth-child(2) ul li {
     cursor: pointer;
 }
 
-header div.logo img{
+header div.logo img {
     filter: invert(1);
+}
+
+header .newMessage {
+    top: -5px;
+    right: 0;
+    width: 13px;
+    height: 13px;
+    background: #184ec2;
+    border-radius: 50%;
+    border: 2px solid #1f71bd;
+    z-index: 2;
 }
 
 nav {
@@ -18,7 +29,7 @@ nav {
 }
 
 nav ul {
-    overflow: auto;
+    overflow: auto hidden;
 }
 
 nav ul li {
@@ -32,6 +43,12 @@ nav ul li {
     font-size: 10pt;
     font-weight: 700;
     cursor: pointer;
+    transition-property: all;
+    transition-duration: .2s;
+}
+
+nav ul li:hover {
+    transform: scale(1.1);
 }
 
 nav ul li i {

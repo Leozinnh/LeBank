@@ -21,7 +21,8 @@ const Header = (props) => {
                                 help
                             </i>
                         </li>
-                        <li className="px-1">
+                        <li className="relative px-1">
+                            <span className="absolute newMessage" title='Nova Mensagem'></span>
                             <i className="material-icons">
                                 chat
                             </i>
