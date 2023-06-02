@@ -56,11 +56,36 @@ const Main = (props) => {
                         <span className='relative flex justify-between items-center'>Desbloqueado <i className="material-icons">lock_open</i></span> <span className="cursor-pointer">Bloquear</span>
                     </div>
                 </section>
+                {/*  */}
+                <section className="relative card m-2 rounded-xl w-full ease-in-out duration-300">
+                    <div className="header flex flex-row flex-nowrap p-2 rounded-t-xl w-full h-48 lg:h-56">
+                        <div className='relative flex justify-center items-center p-2 creditCard'>
+                            <div className="relative flex justify-center items-center rounded-md min-h-8 max-h-48 layout">
+                                <img src="/imgs/chip.png" className="absolute chip" alt="" />
+                                <img src="/imgs/mastercard.png" className="absolute brand" alt="" />
+                                <img src="/imgs/bank.png" className="absolute logo" alt="" />
+                            </div>
+                        </div>
+                        <div className="relative flex justify-around flex-col flex-wrap h-full lg:text-xl infos">
+                            <div className='relative'>
+                                <span className='font-semibold'>Cartão virtual</span>
+                                <p className='font-black'>Final 2022</p>
+                            </div>
+                            <div className='relative'>
+                                <span className='font-semibold'>Nome Titual</span>
+                                <p className='font-black'>Leonardo Alves</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="footer flex justify-between items-center px-4 py-2 cursor-pointer rounded-b-xl">
+                        <span className='relative flex justify-between items-center'>Bloqueado <i className="material-icons">lock</i></span> <span className="cursor-pointer">Desbloquear</span>
+                    </div>
+                </section>
             </main>
             <aside class="overflow-hidden">
-                <section class="relative cards p-2 flex-nowrap rounded-xl max-w-full w-full">
+                <section class="relative cards flex-nowrap rounded-xl max-w-full w-full">
                     {/* <h2>Aproveite:</h2> */}
-                    <div class="flex items-center flex-row slide rounded-xl p-2 max-w-full">
+                    <div class="flex items-center flex-row slide rounded-xl py-2 max-w-full">
                         <img class="h-32 md:h-48 lg:h-80 ease-in-out duration-300 mx-2 rounded-lg" src="./imgs/banner5.png" alt="" />
                         <img class="h-32 md:h-48 lg:h-80 ease-in-out duration-300 mx-2 rounded-lg" src="./imgs/banner3.png" alt="" />
                         <img class="h-32 md:h-48 lg:h-80 ease-in-out duration-300 mx-2 rounded-lg" src="./imgs/banner1.png" alt="" />
