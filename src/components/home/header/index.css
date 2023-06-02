@@ -8,6 +8,10 @@ header div:nth-child(2) ul li {
     cursor: pointer;
 }
 
+header div.logo img{
+    filter: invert(1);
+}
+
 nav {
     height: 20%;
     /* background-color: rgba(255, 166, 0, 0.363); */

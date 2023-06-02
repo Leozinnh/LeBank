@@ -4,9 +4,15 @@ const Header = (props) => {
     return (
         <div>
             <header className="relative px-2 py-1 flex justify-between items-center flex-wrap w-full">
-                <div>
-                    <span className="font-medium">Olá! Seja bem-vindo,</span>
-                    <p className="font-semibold">Leonardo Alves</p>
+
+                <div className='relative flex items-center flex-row'>
+                    <div className="logo">
+                        <img className='relative w-auto h-16 sm:h-20 md:h-24 lg:h-28' src="/imgs/bank.png" alt="" />
+                    </div>
+                    <div className="flex justify-left    flex-col">
+                        <span className="font-medium">Olá! Seja bem-vindo,</span>
+                        <p className="font-semibold">Leonardo Alves</p>
+                    </div>
                 </div>
                 <div>
                     <ul className="relative flex items-center flex-row flex-wrap">
