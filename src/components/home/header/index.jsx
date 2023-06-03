@@ -1,5 +1,20 @@
 import './index.css'
 
+function getCookie(chave) {
+    var chaveIgual = chave + "=";
+    var pares = document.cookie.split(";");
+    for (let i = 0; i < pares.length; i++) {
+        var par = pares[i];
+        while (par.charAt(0) == " ") {
+            par = par.substring(1);
+        }
+        if (par.indexOf(chaveIgual) == 0) {
+            return par.substring(chaveIgual.length);
+        }
+    }
+    return "";
+}
+
 const Header = (props) => {
     return (
         <div>
@@ -11,29 +26,29 @@ const Header = (props) => {
                     </div>
                     <div className="flex justify-left    flex-col">
                         <span className="font-medium">Olá! Seja bem-vindo,</span>
-                        <p className="font-semibold">Leonardo Alves</p>
+                        <p className="font-semibold">{getCookie("usuario")}</p>
                     </div>
                 </div>
                 <div>
                     <ul className="relative flex items-center flex-row flex-wrap">
                         <li className="px-1">
-                            <i className="material-icons">
+                            <i className="material-icons xl:text-3xl">
                                 help
                             </i>
                         </li>
                         <li className="relative px-1">
                             <span className="absolute newMessage" title='Nova Mensagem'></span>
-                            <i className="material-icons">
+                            <i className="material-icons xl:text-3xl">
                                 chat
                             </i>
                         </li>
                         <li className="px-1">
-                            <i className="material-icons">
+                            <i className="material-icons xl:text-3xl">
                                 search
                             </i>
                         </li>
                         <li className="px-1">
-                            <i className="material-icons">
+                            <i className="material-icons xl:text-3xl">
                                 menu
                             </i>
                         </li>

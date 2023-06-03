@@ -32,7 +32,8 @@ main .left {
 
 main .left header {
     height: auto;
-    height: 30%;
+    /* height: 30%; */
+    height: 40%;
     overflow: hidden;
 }
 

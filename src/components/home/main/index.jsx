@@ -2,6 +2,21 @@
 import $ from 'jquery';
 import './index.css'
 
+function getCookie(chave) {
+    var chaveIgual = chave + "=";
+    var pares = document.cookie.split(";");
+    for (let i = 0; i < pares.length; i++) {
+        var par = pares[i];
+        while (par.charAt(0) == " ") {
+            par = par.substring(1);
+        }
+        if (par.indexOf(chaveIgual) == 0) {
+            return par.substring(chaveIgual.length);
+        }
+    }
+    return "";
+}
+
 const Main = (props) => {
     const toggleSaldo = (div) => {
         if ($(`#${div}-i`).hasClass("fa-eye")) {
@@ -50,27 +65,27 @@ const Main = (props) => {
                     <h2 className='relative p-1 flex items-center'><i className="fa-brands fa-pix px-2" aria-hidden="true"></i> Pix</h2>
                     <div className="header flex flex-row flex-nowrap p-2 rounded-t-xl w-full h-38 md:h-42 lg:h-44">
                         <ul className="relative flex justify-around flex-wrap items-center flex-row w-full ease-in-out duration-300">
-                            <li>
+                            <li className='relative lg:scale-110 ease-in-out duration-300'>
                                 <i className="material-icons">qr_code_scanner</i>
                                 Ler QrCode
                             </li>
-                            <li>
+                            <li className='relative lg:scale-110 ease-in-out duration-300'>
                                 <i className="fa-solid fa-money-bill-transfer"></i>
                                 Transferir
                             </li>
-                            <li>
+                            <li className='relative lg:scale-110 ease-in-out duration-300'>
                                 <i className="material-icons">receipt</i>
                                 Parcelar pix
                             </li>
-                            <li>
+                            <li className='relative lg:scale-110 ease-in-out duration-300'>
                                 <i className="material-icons">account_balance</i>
                                 Sacar
                             </li>
-                            <li>
+                            <li className='relative lg:scale-110 ease-in-out duration-300'>
                                 <i className="material-icons">attach_money</i>
                                 Cobrar
                             </li>
-                            <li>
+                            <li className='relative lg:scale-110 ease-in-out duration-300'>
                                 <i className="material-icons">tune</i>
                                 Limites pix
                             </li>
@@ -106,11 +121,11 @@ const Main = (props) => {
                         <div className="relative flex justify-around flex-col flex-wrap h-full lg:text-xl infos">
                             <div className='relative'>
                                 <span className='font-semibold'>Cartão virtual</span>
-                                <p className='font-black'>Final 2023</p>
+                                <p className='font-black'>Final {Math.floor(2000 * Math.random() + (2000 * Math.random() + 999))}</p>
                             </div>
                             <div className='relative'>
                                 <span className='font-semibold'>Nome Titual</span>
-                                <p className='font-black'>Leonardo Alves</p>
+                                <p className='font-black'>{getCookie("usuario")}</p>
                             </div>
                         </div>
                     </div>
@@ -132,11 +147,11 @@ const Main = (props) => {
                         <div className="relative flex justify-around flex-col flex-wrap h-full lg:text-xl infos">
                             <div className='relative'>
                                 <span className='font-semibold'>Cartão virtual</span>
-                                <p className='font-black'>Final 2022</p>
+                                <p className='font-black'>Final {Math.floor(2000 * Math.random() + (2000 * Math.random() + 999))}</p>
                             </div>
                             <div className='relative'>
                                 <span className='font-semibold'>Nome Titual</span>
-                                <p className='font-black'>Leonardo Alves</p>
+                                <p className='font-black'>{getCookie("usuario")}</p>
                             </div>
                         </div>
                     </div>
