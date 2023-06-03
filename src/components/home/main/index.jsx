@@ -31,8 +31,49 @@ const Main = (props) => {
                     </div>
                 </section>
             </main>
+            {/*  */}
+            <main className="relative px-2 py-1 flex justify-center items-center flex-col lg:flex-row w-full">
+                <section className="relative pix m-2 rounded-xl w-full ease-in-out duration-300">
+                    <h2 className='relative p-1 flex items-center'><i className="fa-brands fa-pix px-2" aria-hidden="true"></i> Pix</h2>
+                    <div className="header flex flex-row flex-nowrap p-2 rounded-t-xl w-full h-36 lg:h-48">
+                        <ul className="relative flex justify-around items-center flex-row w-full ease-in-out duration-300">
+                            <li>
+                                <i class="material-icons">qr_code_scanner</i>
+                                Ler QrCode
+                            </li>
+                            <li>
+                                <i className="fa-solid fa-money-bill-transfer"></i>
+                                Transferir
+                            </li>
+                            <li>
+                                <i class="material-icons">receipt</i>
+                                Parcelar pix
+                            </li>
+                            <li>
+                                <i class="material-icons">attach_money</i>
+                                Cobrar
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="footer flex justify-around items-center px-4 py-2 cursor-pointer rounded-b-xl">
+                        <button className='relative font-semibold w-6/12'>MINHAS CHAVES</button>
+                        <button className='relative font-semibold w-6/12' style={{ borderLeft: "2px solid rgba(255,255,255,.1)" }}>CRIAR CHAVE</button>
+                    </div>
+                </section>
+                <section className="relative pix m-2 rounded-xl w-full ease-in-out duration-300">
+                    <h2 className='relative p-1 flex items-center'><i class="material-icons px-2">insights</i> Investir</h2>
+                    <div className="header flex flex-row items-center flex-nowrap p-2 rounded-t-xl w-full h-36 lg:h-48 text-center">
+                        <p className='text-lg lg:text-xl'>Você pode começar seus investimentos com apenas R$ 100, Investimento seguro com seguro do governo brasileiro, Saque quando quiser!</p>
+                    </div>
+                    <div className="footer flex justify-around items-center px-4 py-2 cursor-pointer rounded-b-xl">
+                        <button className='relative font-semibold'>INVESTIR</button>
+                    </div>
+                </section>
+            </main>
+            {/*  */}
             <main className="relative px-2 py-1 flex justify-center items-center flex-col lg:flex-row w-full">
                 <section className="relative card m-2 rounded-xl w-full ease-in-out duration-300">
+                    <h2 className='relative p-1 flex items-center'><i class="material-icons px-2">credit_card</i> Prism Crédito</h2>
                     <div className="header flex flex-row flex-nowrap p-2 rounded-t-xl w-full h-48 lg:h-56">
                         <div className='relative flex justify-center items-center p-2 creditCard'>
                             <div className="relative flex justify-center items-center rounded-md min-h-8 max-h-48 layout">
@@ -58,6 +99,7 @@ const Main = (props) => {
                 </section>
                 {/*  */}
                 <section className="relative card m-2 rounded-xl w-full ease-in-out duration-300">
+                    <h2 className='relative p-1 flex items-center'><i class="material-icons px-2">credit_card</i> Exclusive Crédito</h2>
                     <div className="header flex flex-row flex-nowrap p-2 rounded-t-xl w-full h-48 lg:h-56">
                         <div className='relative flex justify-center items-center p-2 creditCard'>
                             <div className="relative flex justify-center items-center rounded-md min-h-8 max-h-48 layout">
