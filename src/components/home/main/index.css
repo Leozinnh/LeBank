@@ -193,7 +193,7 @@ main section.pix .header {
 }
 
 main section.pix .header ul {
-    overflow: hidden;
+    overflow: hidden auto;
 }
 
 main section.pix .header ul li {

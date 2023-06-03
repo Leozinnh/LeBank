@@ -1,6 +1,19 @@
+// import React, { useState } from "react";
+import $ from 'jquery';
 import './index.css'
 
 const Main = (props) => {
+    const toggleSaldo = (div) => {
+        if ($(`#${div}-i`).hasClass("fa-eye")) {
+            $(`#${div}`).removeClass("hide")
+            $(`#${div}-i`).removeClass("fa-eye")
+            $(`#${div}-i`).addClass("fa-eye-slash")
+        } else {
+            $(`#${div}`).addClass("hide")
+            $(`#${div}-i`).addClass("fa-eye")
+            $(`#${div}-i`).removeClass("fa-eye-slash")
+        }
+    };
     return (
         <div>
             <main className="relative px-2 py-1 flex justify-center items-center flex-col lg:flex-row w-full">
@@ -10,7 +23,7 @@ const Main = (props) => {
                         <p className="relative flex items-center p-1">
                             <span>R$</span> <strong id="saldoAtual" className="hide">5.000,00</strong> &nbsp; <span
                                 className="eye cursor-pointer" ><i id="saldoAtual-i"
-                                    className="fa fa-eye" aria-hidden="true"></i></span>
+                                    className="fa fa-eye" aria-hidden="true" onClick={() => { toggleSaldo('saldoAtual') }}></i></span>
                         </p>
                     </div>
                     <div className="footer flex justify-between items-center px-4 py-2 cursor-pointer rounded-b-xl">
@@ -23,7 +36,7 @@ const Main = (props) => {
                         <p className="relative flex items-center p-1">
                             <span>R$</span> <strong id="saldoBloqueado" className="hide">0</strong> &nbsp; <span
                                 className="eye cursor-pointer" ><i id="saldoBloqueado-i"
-                                    className="fa fa-eye" aria-hidden="true"></i></span>
+                                    className="fa fa-eye" aria-hidden="true" onClick={() => { toggleSaldo('saldoBloqueado') }}></i></span>
                         </p>
                     </div>
                     <div className="footer flex justify-between items-center px-4 py-2 cursor-pointer rounded-b-xl">
@@ -35,10 +48,10 @@ const Main = (props) => {
             <main className="relative px-2 py-1 flex justify-center items-center flex-col lg:flex-row w-full">
                 <section className="relative pix m-2 rounded-xl w-full ease-in-out duration-300">
                     <h2 className='relative p-1 flex items-center'><i className="fa-brands fa-pix px-2" aria-hidden="true"></i> Pix</h2>
-                    <div className="header flex flex-row flex-nowrap p-2 rounded-t-xl w-full h-36 lg:h-48">
-                        <ul className="relative flex justify-around items-center flex-row w-full ease-in-out duration-300">
+                    <div className="header flex flex-row flex-nowrap p-2 rounded-t-xl w-full h-38 md:h-42 lg:h-44">
+                        <ul className="relative flex justify-around flex-wrap items-center flex-row w-full ease-in-out duration-300">
                             <li>
-                                <i class="material-icons">qr_code_scanner</i>
+                                <i className="material-icons">qr_code_scanner</i>
                                 Ler QrCode
                             </li>
                             <li>
@@ -46,12 +59,20 @@ const Main = (props) => {
                                 Transferir
                             </li>
                             <li>
-                                <i class="material-icons">receipt</i>
+                                <i className="material-icons">receipt</i>
                                 Parcelar pix
                             </li>
                             <li>
-                                <i class="material-icons">attach_money</i>
+                                <i className="material-icons">account_balance</i>
+                                Sacar
+                            </li>
+                            <li>
+                                <i className="material-icons">attach_money</i>
                                 Cobrar
+                            </li>
+                            <li>
+                                <i className="material-icons">tune</i>
+                                Limites pix
                             </li>
                         </ul>
                     </div>
@@ -61,8 +82,8 @@ const Main = (props) => {
                     </div>
                 </section>
                 <section className="relative pix m-2 rounded-xl w-full ease-in-out duration-300">
-                    <h2 className='relative p-1 flex items-center'><i class="material-icons px-2">insights</i> Investir</h2>
-                    <div className="header flex flex-row items-center flex-nowrap p-2 rounded-t-xl w-full h-36 lg:h-48 text-center">
+                    <h2 className='relative p-1 flex items-center'><i className="material-icons px-2">insights</i> Investir</h2>
+                    <div className="header flex flex-row items-center flex-nowrap p-2 rounded-t-xl w-full h-38 md:h-42 lg:h-44 text-center">
                         <p className='text-lg lg:text-xl'>Você pode começar seus investimentos com apenas R$ 100, Investimento seguro com seguro do governo brasileiro, Saque quando quiser!</p>
                     </div>
                     <div className="footer flex justify-around items-center px-4 py-2 cursor-pointer rounded-b-xl">
@@ -73,7 +94,7 @@ const Main = (props) => {
             {/*  */}
             <main className="relative px-2 py-1 flex justify-center items-center flex-col lg:flex-row w-full">
                 <section className="relative card m-2 rounded-xl w-full ease-in-out duration-300">
-                    <h2 className='relative p-1 flex items-center'><i class="material-icons px-2">credit_card</i> Prism Crédito</h2>
+                    <h2 className='relative p-1 flex items-center'><i className="material-icons px-2">credit_card</i> Prism Crédito</h2>
                     <div className="header flex flex-row flex-nowrap p-2 rounded-t-xl w-full h-48 lg:h-56">
                         <div className='relative flex justify-center items-center p-2 creditCard'>
                             <div className="relative flex justify-center items-center rounded-md min-h-8 max-h-48 layout">
@@ -99,7 +120,7 @@ const Main = (props) => {
                 </section>
                 {/*  */}
                 <section className="relative card m-2 rounded-xl w-full ease-in-out duration-300">
-                    <h2 className='relative p-1 flex items-center'><i class="material-icons px-2">credit_card</i> Exclusive Crédito</h2>
+                    <h2 className='relative p-1 flex items-center'><i className="material-icons px-2">credit_card</i> Exclusive Crédito</h2>
                     <div className="header flex flex-row flex-nowrap p-2 rounded-t-xl w-full h-48 lg:h-56">
                         <div className='relative flex justify-center items-center p-2 creditCard'>
                             <div className="relative flex justify-center items-center rounded-md min-h-8 max-h-48 layout">
@@ -124,15 +145,15 @@ const Main = (props) => {
                     </div>
                 </section>
             </main>
-            <aside class="overflow-hidden">
-                <section class="relative px-4 cards flex-nowrap rounded-xl max-w-full w-full">
+            <aside className="overflow-hidden">
+                <section className="relative px-4 cards flex-nowrap rounded-xl max-w-full w-full">
                     {/* <h2>Aproveite:</h2> */}
-                    <div class="flex items-center flex-row slide rounded-xl py-2 max-w-full">
-                        <img class="h-32 md:h-48 lg:h-80 ease-in-out duration-300 mx-2 rounded-lg" src="./imgs/banner5.png" alt="" />
-                        <img class="h-32 md:h-48 lg:h-80 ease-in-out duration-300 mx-2 rounded-lg" src="./imgs/banner3.png" alt="" />
-                        <img class="h-32 md:h-48 lg:h-80 ease-in-out duration-300 mx-2 rounded-lg" src="./imgs/banner1.png" alt="" />
-                        <img class="h-32 md:h-48 lg:h-80 ease-in-out duration-300 mx-2 rounded-lg" src="./imgs/banner2.png" alt="" />
-                        <img class="h-32 md:h-48 lg:h-80 ease-in-out duration-300 mx-2 rounded-lg" src="./imgs/banner4.png" alt="" />
+                    <div className="flex items-center flex-row slide rounded-xl py-2 max-w-full">
+                        <img className="h-32 md:h-48 lg:h-80 ease-in-out duration-300 mx-2 rounded-lg" src="./imgs/banner5.png" alt="" />
+                        <img className="h-32 md:h-48 lg:h-80 ease-in-out duration-300 mx-2 rounded-lg" src="./imgs/banner3.png" alt="" />
+                        <img className="h-32 md:h-48 lg:h-80 ease-in-out duration-300 mx-2 rounded-lg" src="./imgs/banner1.png" alt="" />
+                        <img className="h-32 md:h-48 lg:h-80 ease-in-out duration-300 mx-2 rounded-lg" src="./imgs/banner2.png" alt="" />
+                        <img className="h-32 md:h-48 lg:h-80 ease-in-out duration-300 mx-2 rounded-lg" src="./imgs/banner4.png" alt="" />
                     </div>
                 </section>
             </aside>
