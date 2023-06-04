@@ -29,6 +29,11 @@ const Main = (props) => {
             $(`#${div}-i`).removeClass("fa-eye-slash")
         }
     };
+    const open = (param) => {
+        if (param == "pix") {
+            $("article.pix").addClass("openned");
+        }
+    }; 
     return (
         <div>
             <main className="relative px-2 py-1 flex justify-center items-center flex-col lg:flex-row w-full">
@@ -69,7 +74,7 @@ const Main = (props) => {
                                 <i className="material-icons">qr_code_scanner</i>
                                 Ler QrCode
                             </li>
-                            <li className='relative lg:scale-110 ease-in-out duration-300'>
+                            <li className='relative lg:scale-110 ease-in-out duration-300' onClick={() => { open('pix') }}>
                                 <i className="fa-solid fa-money-bill-transfer"></i>
                                 Transferir
                             </li>

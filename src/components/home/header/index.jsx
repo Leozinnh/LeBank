@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import './index.css'
 
 function getCookie(chave) {
@@ -16,6 +17,11 @@ function getCookie(chave) {
 }
 
 const Header = (props) => {
+    const open = (param) => {
+        if (param == "pix") {
+            $("article.pix").addClass("openned");
+        }
+    };
     return (
         <div>
             <header className="relative px-2 py-1 flex justify-between items-center flex-wrap w-full">
@@ -65,7 +71,7 @@ const Header = (props) => {
                         <i className="fa fa-barcode" aria-hidden="true"></i>
                         Pagar Boleto
                     </li>
-                    <li>
+                    <li onClick={() => { open('pix') }}>
                         <i className="fa-brands fa-pix" aria-hidden="true"></i>
                         Pix
                     </li>

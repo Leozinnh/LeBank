@@ -1,0 +1,61 @@
+article.pix {
+    /* background-color: red; */
+    background-color: rgba(27, 28, 28, .93);
+    top: 100vh;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -3;
+    backdrop-filter: blur(5px);
+    -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, .5)) !important;
+}
+
+article.pix.openned {
+    z-index: 3;
+    top: 0;
+}
+
+article.pix.openned header {
+    height: 50px;
+    /* background-color: blue; */
+}
+
+article.pix.openned main {
+    /* background-color: green; */
+    height: 200px;
+    min-height: 200px;
+}
+
+article.pix.openned main section {
+    /* background-color: rgba(0, 255, 255, 0.384); */
+    border-radius: .7rem;
+    border-bottom: 2px solid #6b6b6b2a;
+}
+
+article.pix.openned main section div.input {
+    /* background-color: rgb(127, 172, 255); */
+    width: 75%;
+    height: 50%;
+}
+
+article.pix.openned main section div.input input {
+    background-color: #30303065;
+    font-size: 20pt;
+    color: #fafafa;
+    border: none;
+    border-bottom: 2px solid #303030;
+}
+
+article.pix.openned main section div.input input::placeholder {
+    color: #fafafabd;
+    font-size: 20pt;
+}
+
+article.pix.openned main section p {
+    font-size: 11pt;
+}
+
+article.pix.openned main section p b {
+    font-weight: 900;
+    font-size: 12pt;
+}
