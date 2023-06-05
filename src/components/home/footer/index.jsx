@@ -4,6 +4,7 @@ import './index.css'
 const Footer = (props) => {
     const open = (param) => {
         if (param == "pix") {
+            $("body").addClass("overflow-hidden");
             $("article.pix").addClass("openned");
         }
     };

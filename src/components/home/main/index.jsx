@@ -31,6 +31,7 @@ const Main = (props) => {
     };
     const open = (param) => {
         if (param == "pix") {
+            $("body").addClass("overflow-hidden");
             $("article.pix").addClass("openned");
         }
     }; 

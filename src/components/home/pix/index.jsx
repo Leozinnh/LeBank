@@ -3,11 +3,12 @@ import './index.css'
 
 const Pix = (props) => {
     const back = () => {
+        $("body").removeClass("overflow-hidden");
         $("article.pix").removeClass("openned");
     };
 
     return (
-        <article className='absolute pix ease-linear duration-500 rounded-t-xl m-4'>
+        <article className='fixed pix openned ease-linear duration-500 rounded-t-xl m-4'>
             <header className='relative flex justify-between items-center px-3'>
                 <div className='relative flex flex-row items-center text-center cursor-pointer' onClick={() => { back() }}>
                     <i className="material-icons">arrow_back_ios</i>
@@ -27,6 +28,65 @@ const Pix = (props) => {
                     <p>Não tem uma chave? <b>Crie uma agora</b></p>
                 </section>
             </main>
+            <section className='relative p-2 actions'>
+                {/* <h2 className='relative mb-2 px-2 text-xl font-bold'>Sugestões</h2> */}
+                <ul className="relative flex justify-around flex-wrap items-center flex-row w-full ease-in-out duration-300">
+                    <li className='relative lg:scale-110 ease-in-out duration-300 opacity-70 hover:opacity-100'>
+                        <i className="material-icons">qr_code_scanner</i>
+                        Ler QrCode
+                    </li>
+                    <li className='relative lg:scale-110 ease-in-out duration-300 opacity-70 hover:opacity-100'>
+                        <i className="material-icons">account_balance</i>
+                        Sacar
+                    </li>
+                    <li className='relative lg:scale-110 ease-in-out duration-300 opacity-70 hover:opacity-100'>
+                        <i className="material-icons">attach_money</i>
+                        Cobrar
+                    </li>
+                    <li className='relative lg:scale-110 ease-in-out duration-300 opacity-70 hover:opacity-100'>
+                        <i className="material-icons">currency_exchange</i>
+                        Reembolsar pix
+                    </li>
+                    <li className='relative lg:scale-110 ease-in-out duration-300 opacity-70 hover:opacity-100'>
+                        <i className="material-icons">tune</i>
+                        Limites pix
+                    </li>
+                </ul>
+            </section>
+            <section className='relative p-2 suggestions'>
+                <ul className="relative flex justify-around flex-wrap items-center flex-row w-full ease-in-out duration-300">
+                    <li className='relative flex justify-between items-center my-2 lg:scale-110 ease-in-out duration-300 w-full opacity-70 hover:opacity-100 cursor-pointer'>
+                        <div className='relative flex items-center'>
+                            <i className="relative material-icons px-2 text-4xl">account_circle</i>
+                            <div>
+                                <span className='relative block text-2xl font-bold'>Leonardo Alves</span>
+                                <p className='relative block text-xs opacity-60'>BCO C6 S.A.</p>
+                            </div>
+                        </div>
+                        <i className="relative material-icons px-2 text-4xl ease-in-out duration-300 hover:text-red-600">favorite</i>
+                    </li>
+                    <li className='relative flex justify-between items-center my-2 lg:scale-110 ease-in-out duration-300 w-full opacity-70 hover:opacity-100 cursor-pointer'>
+                        <div className='relative flex items-center'>
+                            <i className="relative material-icons px-2 text-4xl">account_circle</i>
+                            <div>
+                                <span className='relative block text-2xl font-bold'>Marília Mendonça</span>
+                                <p className='relative block text-xs opacity-60'>NU PAGAMENTO</p>
+                            </div>
+                        </div>
+                        <i className="relative material-icons px-2 text-4xl ease-in-out duration-300 hover:text-red-600">favorite</i>
+                    </li>
+                    <li className='relative flex justify-between items-center my-2 lg:scale-110 ease-in-out duration-300 w-full opacity-70 hover:opacity-100 cursor-pointer'>
+                        <div className='relative flex items-center'>
+                            <i className="relative material-icons px-2 text-4xl">account_circle</i>
+                            <div>
+                                <span className='relative block text-2xl font-bold'>Neymar Júnior</span>
+                                <p className='relative block text-xs opacity-60'>BANCO INTER</p>
+                            </div>
+                        </div>
+                        <i className="relative material-icons px-2 text-4xl ease-in-out duration-300 hover:text-red-600">favorite</i>
+                    </li>
+                </ul>
+            </section>
         </article>
     )
 }

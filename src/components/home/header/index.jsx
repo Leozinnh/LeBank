@@ -19,6 +19,7 @@ function getCookie(chave) {
 const Header = (props) => {
     const open = (param) => {
         if (param == "pix") {
+            $("body").addClass("overflow-hidden");
             $("article.pix").addClass("openned");
         }
     };
@@ -75,7 +76,7 @@ const Header = (props) => {
                         <i className="fa-brands fa-pix" aria-hidden="true"></i>
                         Pix
                     </li>
-                    <li>
+                    <li onClick={() => { open('pix') }}>
                         <i className="fa-solid fa-money-bill-transfer"></i>
                         Transferir
                     </li>
