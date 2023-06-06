@@ -8,7 +8,7 @@ const Pix = (props) => {
     };
 
     return (
-        <article className='fixed pix openned ease-linear duration-500 rounded-t-xl m-4'>
+        <article className='fixed pix ease-linear duration-500 rounded-t-xl m-4'>
             <header className='relative flex justify-between items-center px-3'>
                 <div className='relative flex flex-row items-center text-center cursor-pointer' onClick={() => { back() }}>
                     <i className="material-icons">arrow_back_ios</i>
@@ -55,7 +55,7 @@ const Pix = (props) => {
             </section>
             <section className='relative p-2 suggestions'>
                 <ul className="relative flex justify-around flex-wrap items-center flex-row w-full ease-in-out duration-300">
-                    <li className='relative flex justify-between items-center my-2 lg:scale-110 ease-in-out duration-300 w-full opacity-70 hover:opacity-100 cursor-pointer'>
+                    <li className='relative flex justify-between items-center my-2 ease-in-out duration-300 w-full opacity-70 hover:opacity-100 cursor-pointer'>
                         <div className='relative flex items-center'>
                             <i className="relative material-icons px-2 text-4xl">account_circle</i>
                             <div>
@@ -65,7 +65,7 @@ const Pix = (props) => {
                         </div>
                         <i className="relative material-icons px-2 text-4xl ease-in-out duration-300 hover:text-red-600">favorite</i>
                     </li>
-                    <li className='relative flex justify-between items-center my-2 lg:scale-110 ease-in-out duration-300 w-full opacity-70 hover:opacity-100 cursor-pointer'>
+                    <li className='relative flex justify-between items-center my-2 ease-in-out duration-300 w-full opacity-70 hover:opacity-100 cursor-pointer'>
                         <div className='relative flex items-center'>
                             <i className="relative material-icons px-2 text-4xl">account_circle</i>
                             <div>
@@ -75,7 +75,7 @@ const Pix = (props) => {
                         </div>
                         <i className="relative material-icons px-2 text-4xl ease-in-out duration-300 hover:text-red-600">favorite</i>
                     </li>
-                    <li className='relative flex justify-between items-center my-2 lg:scale-110 ease-in-out duration-300 w-full opacity-70 hover:opacity-100 cursor-pointer'>
+                    <li className='relative flex justify-between items-center my-2 ease-in-out duration-300 w-full opacity-70 hover:opacity-100 cursor-pointer'>
                         <div className='relative flex items-center'>
                             <i className="relative material-icons px-2 text-4xl">account_circle</i>
                             <div>

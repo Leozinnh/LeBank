@@ -157,6 +157,36 @@ main section.card .header .infos div span {
     color: #818181;
 }
 
+:root {
+    --status-free: 50%;
+    --status-used: 50%;
+}
+
+main section.card .header .infos .cardLimit::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3pt;
+    border-top-right-radius: .5rem;
+    border-top-left-radius: .5rem;
+    height: var(--status-free, 50%);
+    background-color: #dadada52;
+}
+
+main section.card .header .infos .cardLimit::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 3pt;
+    border-top: 2px solid rgba(255, 255, 255, .5);
+    border-bottom-right-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+    height: var(--status-used, 50%);
+    background-color: #dadadad7;
+}
+
 
 main section.card .footer {
     background-color: #303030;
@@ -225,7 +255,6 @@ main section.pix .header ul li i {
     -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, .5)) !important;
     border-radius: .5rem;
 }
-
 
 main section.pix .footer {
     background-color: #303030;

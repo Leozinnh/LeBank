@@ -34,7 +34,7 @@ const Main = (props) => {
             $("body").addClass("overflow-hidden");
             $("article.pix").addClass("openned");
         }
-    }; 
+    };
     return (
         <div>
             <main className="relative px-2 py-1 flex justify-center items-center flex-col lg:flex-row w-full">
@@ -125,13 +125,19 @@ const Main = (props) => {
                             </div>
                         </div>
                         <div className="relative flex justify-around flex-col flex-wrap h-full lg:text-xl infos">
-                            <div className='relative'>
-                                <span className='font-semibold'>Cartão virtual</span>
-                                <p className='font-black'>Final {Math.floor(2000 * Math.random() + (2000 * Math.random() + 999))}</p>
-                            </div>
-                            <div className='relative'>
-                                <span className='font-semibold'>Nome Titual</span>
-                                <p className='font-black'>{getCookie("usuario")}</p>
+                            <div className='relative flex justify-between'>
+                                <div className='relative px-2'>
+                                    <span className='font-semibold'>Cartão virtual</span>
+                                    <p className='font-black'>Final {Math.floor(2000 * Math.random() + (2000 * Math.random() + 999))}</p>
+                                    <span className='font-semibold'>Nome Titual</span>
+                                    <p className='font-black'>{getCookie("usuario")}</p>
+                                </div>
+                                <div className='relative px-2 cardLimit' style={{ "--status-free": "65%", "--status-used": "35%" }}>
+                                    <span className='font-semibold'>Limite Disponível</span>
+                                    <p className='font-black'>R$ 9.000,00</p>
+                                    <span className='font-semibold'>Limite Usado</span>
+                                    <p className='font-black'>R$ 1.000,00</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -151,13 +157,19 @@ const Main = (props) => {
                             </div>
                         </div>
                         <div className="relative flex justify-around flex-col flex-wrap h-full lg:text-xl infos">
-                            <div className='relative'>
-                                <span className='font-semibold'>Cartão virtual</span>
-                                <p className='font-black'>Final {Math.floor(2000 * Math.random() + (2000 * Math.random() + 999))}</p>
-                            </div>
-                            <div className='relative'>
-                                <span className='font-semibold'>Nome Titual</span>
-                                <p className='font-black'>{getCookie("usuario")}</p>
+                            <div className='relative flex justify-between'>
+                                <div className='relative px-2'>
+                                    <span className='font-semibold'>Cartão virtual</span>
+                                    <p className='font-black'>Final {Math.floor(2000 * Math.random() + (2000 * Math.random() + 999))}</p>
+                                    <span className='font-semibold'>Nome Titual</span>
+                                    <p className='font-black'>{getCookie("usuario")}</p>
+                                </div>
+                                <div className='relative px-2 cardLimit' style={{ "--status-free": "82%", "--status-used": "18%" }}>
+                                    <span className='font-semibold'>Limite Disponível</span>
+                                    <p className='font-black'>R$ 9.000,00</p>
+                                    <span className='font-semibold'>Limite Usado</span>
+                                    <p className='font-black'>R$ 1.000,00</p>
+                                </div>
                             </div>
                         </div>
                     </div>
