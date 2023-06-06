@@ -8,7 +8,7 @@ const Pix = (props) => {
     };
 
     return (
-        <article className='fixed pix ease-linear duration-500 rounded-t-xl m-4'>
+        <article className='fixed pix ease-linear duration-500 rounded-t-xl m-4 mb-0'>
             <header className='relative flex justify-between items-center px-3'>
                 <div className='relative flex flex-row items-center text-center cursor-pointer' onClick={() => { back() }}>
                     <i className="material-icons">arrow_back_ios</i>

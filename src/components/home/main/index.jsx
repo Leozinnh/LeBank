@@ -132,11 +132,11 @@ const Main = (props) => {
                                     <span className='font-semibold'>Nome Titual</span>
                                     <p className='font-black'>{getCookie("usuario")}</p>
                                 </div>
-                                <div className='relative px-2 cardLimit' style={{ "--status-free": "65%", "--status-used": "35%" }}>
+                                <div className='relative px-4 cardLimit' style={{ "--status-free": "65%", "--status-used": "35%" }}>
                                     <span className='font-semibold'>Limite Disponível</span>
-                                    <p className='font-black'>R$ 9.000,00</p>
+                                    <p className='font-black'>R$ 6.500,00</p>
                                     <span className='font-semibold'>Limite Usado</span>
-                                    <p className='font-black'>R$ 1.000,00</p>
+                                    <p className='font-black'>R$ 3.500,00</p>
                                 </div>
                             </div>
                         </div>
@@ -164,11 +164,11 @@ const Main = (props) => {
                                     <span className='font-semibold'>Nome Titual</span>
                                     <p className='font-black'>{getCookie("usuario")}</p>
                                 </div>
-                                <div className='relative px-2 cardLimit' style={{ "--status-free": "82%", "--status-used": "18%" }}>
+                                <div className='relative px-4 cardLimit' style={{ "--status-free": "82%", "--status-used": "18%" }}>
                                     <span className='font-semibold'>Limite Disponível</span>
-                                    <p className='font-black'>R$ 9.000,00</p>
+                                    <p className='font-black'>R$ 8.200,00</p>
                                     <span className='font-semibold'>Limite Usado</span>
-                                    <p className='font-black'>R$ 1.000,00</p>
+                                    <p className='font-black'>R$ 1.800,00</p>
                                 </div>
                             </div>
                         </div>

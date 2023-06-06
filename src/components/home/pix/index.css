@@ -40,9 +40,48 @@ article.pix.openned main section div.input {
     height: 50%;
 }
 
+@media(min-width:1px) {
+    article.pix.openned main section div.input input {
+        font-size: 10pt;
+    }
+
+    article.pix.openned main section div.input input::placeholder {
+        font-size: 10pt;
+    }
+}
+
+@media(min-width:568px) {
+    article.pix.openned main section div.input input {
+        font-size: 12pt;
+    }
+
+    article.pix.openned main section div.input input::placeholder {
+        font-size: 12pt;
+    }
+}
+
+@media(min-width:768px) {
+    article.pix.openned main section div.input input {
+        font-size: 17pt;
+    }
+
+    article.pix.openned main section div.input input::placeholder {
+        font-size: 17pt;
+    }
+}
+
+@media(min-width:1024px) {
+    article.pix.openned main section div.input input {
+        font-size: 22pt;
+    }
+
+    article.pix.openned main section div.input input::placeholder {
+        font-size: 22pt;
+    }
+}
+
 article.pix.openned main section div.input input {
     background-color: #30303065;
-    font-size: 20pt;
     color: #fafafa;
     border: none;
     border-bottom: 2px solid #303030;
@@ -50,7 +89,6 @@ article.pix.openned main section div.input input {
 
 article.pix.openned main section div.input input::placeholder {
     color: #fafafabd;
-    font-size: 20pt;
 }
 
 article.pix.openned main section p {
