@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import 'jquery-mask-plugin/dist/jquery.mask.min';
 import './index.css'
 
 const Pix = (props) => {
@@ -6,6 +7,23 @@ const Pix = (props) => {
         $("body").removeClass("overflow-hidden");
         $("article.pix").removeClass("openned");
     };
+
+    function isNumeric(str) {
+        var er = /^[0-9]+$/;
+        return (er.test(str));
+    }
+
+    const pix = (params) => {
+        $("#pix").unmask();
+        if (isNumeric($("#pix").val())) {
+            if ($("#pix").val().length < 11) {
+                $("#pix").mask("999.999.999-99");
+            } else {
+                $("#pix").mask("99.999.999/9999-99");
+            }
+        }
+        $("#pix").focus();
+    }
 
     return (
         <article className='fixed pix ease-linear duration-500 rounded-t-xl m-4 mb-0'>
@@ -23,7 +41,7 @@ const Pix = (props) => {
                 <section className='relative flex justify-center items-center flex-col text-4xl font-black h-full chave'>
                     <h2 className='relative mb-2'>Insira a chave pix</h2>
                     <div className="relative flex justify-center items-center input p-4">
-                        <input className='relative px-3 py-2 rounded-t-md outline-none w-full h-full' type="text" placeholder='E-mail, CPF/CNPJ, Telefone ou aleatória' />
+                        <input className='relative px-3 py-2 rounded-t-md outline-none w-full h-full' name="pix" id="pix" type="text" onKeyUp={() => { pix() }} placeholder='E-mail, CPF/CNPJ, Telefone ou aleatória' />
                     </div>
                     <p>Não tem uma chave? <b>Crie uma agora</b></p>
                 </section>
