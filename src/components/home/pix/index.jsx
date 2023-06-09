@@ -45,6 +45,8 @@ const Pix = (props) => {
                     </div>
                     <p>Não tem uma chave? <b>Crie uma agora</b></p>
                 </section>
+                <section className='hide relative flex justify-center items-center flex-col text-4xl font-black h-full valor'>
+                </section>
             </main>
             <section className='relative p-2 actions'>
                 {/* <h2 className='relative mb-2 px-2 text-xl font-bold'>Sugestões</h2> */}
