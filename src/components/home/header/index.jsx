@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import './index.css'
+import { Link } from 'react-router-dom';
 
 function getCookie(chave) {
     var chaveIgual = chave + "=";
@@ -28,9 +29,11 @@ const Header = (props) => {
             <header className="relative px-2 py-1 flex justify-between items-center flex-wrap w-full">
 
                 <div className='relative flex items-center flex-row'>
-                    <div className="logo">
-                        <img className='relative w-auto h-16 sm:h-20 md:h-24 lg:h-28' src="/imgs/bank.png" alt="" />
-                    </div>
+                    <Link to="/">
+                        <div className="logo">
+                            <img className='relative w-auto h-16 sm:h-20 md:h-24 lg:h-28' src="/imgs/bank.png" alt="" />
+                        </div>
+                    </Link>
                     <div className="flex justify-left    flex-col">
                         <span className="font-medium">Olá! Seja bem-vindo,</span>
                         <p className="font-semibold">{getCookie("usuario")}</p>
@@ -43,12 +46,14 @@ const Header = (props) => {
                                 help
                             </i>
                         </li>
-                        <li className="relative px-1">
-                            <span className="absolute newMessage" title='Nova Mensagem'></span>
-                            <i className="material-icons xl:text-3xl">
-                                chat
-                            </i>
-                        </li>
+                        <Link to="/chat">
+                            <li className="relative px-1">
+                                <span className="absolute newMessage" title='Nova Mensagem'></span>
+                                <i className="material-icons xl:text-3xl">
+                                    chat
+                                </i>
+                            </li>
+                        </Link>
                         <li className="px-1">
                             <i className="material-icons xl:text-3xl">
                                 search

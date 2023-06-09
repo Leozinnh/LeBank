@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import './index.css'
+import { Link } from 'react-router-dom';
 
 const Footer = (props) => {
     const open = (param) => {
@@ -12,7 +13,9 @@ const Footer = (props) => {
         <div className='mb-16'>
             <footer className="fixed bottom-0 left-0 p-4 flex justify-around items-center flex-row w-full">
                 <ul className="text-2xl px-2 py-3 flex justify-around items-center flex-row rounded-lg w-full">
-                    <li className="active"><i className="fa-solid fa-house"></i></li>
+                    <Link to="/">
+                        <li className="active"><i className="fa-solid fa-house"></i></li>
+                    </Link>
                     <li onClick={() => { open('pix') }}><i className="fa-brands fa-pix"></i></li>
                     <li><i className="fa-solid fa-headset"></i></li>
                     <li><i className="fa-solid fa-circle-user"></i></li>
