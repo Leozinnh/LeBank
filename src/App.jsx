@@ -7,13 +7,6 @@ function autenticado() {
   if (usuario != "") {
     return true;
   }
-  // else {
-  //   usuario = prompt("Por favor, digite seu nome: ");
-  //   if ((usuario != "") && (usuario != null)) {
-  //     setCookie("usuario", usuario, 365);
-  //     return true;
-  //   }
-  // }
   return false;
 }
 
