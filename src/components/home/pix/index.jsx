@@ -43,7 +43,7 @@ const Pix = (props) => {
                     <div className="relative flex justify-center items-center input p-4">
                         <input className='relative px-3 py-2 rounded-t-md outline-none w-full h-full' name="pix" id="pix" type="text" onKeyUp={() => { pix() }} placeholder='E-mail, CPF/CNPJ, Telefone ou aleatória' />
                     </div>
-                    <p>Não tem uma chave? <b>Crie uma agora</b></p>
+                    <p>Não tem uma chave?&nbsp;<b>Crie uma agora</b></p>
                 </section>
                 <section className='hide relative flex justify-center items-center flex-col text-4xl font-black h-full valor'>
                 </section>
