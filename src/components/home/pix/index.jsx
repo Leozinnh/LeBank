@@ -13,16 +13,195 @@ const Pix = (props) => {
         return (er.test(str));
     }
 
+    function moeda(v) {
+        v = v.replace(/\D/g, "") // permite digitar apenas numero
+        v = v.replace(/(\d{1})(\d{14})$/, "$1.$2") // coloca ponto antes dos ultimos digitos
+        v = v.replace(/(\d{1})(\d{11})$/, "$1.$2") // coloca ponto antes dos ultimos 11 digitos
+        v = v.replace(/(\d{1})(\d{8})$/, "$1.$2") // coloca ponto antes dos ultimos 8 digitos
+        v = v.replace(/(\d{1})(\d{5})$/, "$1.$2") // coloca ponto antes dos ultimos 5 digitos
+        v = v.replace(/(\d{1})(\d{1,2})$/, "$1,$2") // coloca virgula antes dos ultimos 2 digitos
+        v = v.substring(0, 20) // Limita o tamanho
+        return v;
+    }
+
+    function ValidCPF(cpf) {
+        if (typeof cpf !== "string") return false
+        cpf = cpf.replace(/[\s.-]*/igm, '')
+        if (
+            !cpf ||
+            cpf.length != 11 ||
+            cpf == "00000000000" ||
+            cpf == "11111111111" ||
+            cpf == "22222222222" ||
+            cpf == "33333333333" ||
+            cpf == "44444444444" ||
+            cpf == "55555555555" ||
+            cpf == "66666666666" ||
+            cpf == "77777777777" ||
+            cpf == "88888888888" ||
+            cpf == "99999999999"
+        ) {
+            return false
+        }
+        var soma = 0
+        var resto
+        for (var i = 1; i <= 9; i++)
+            soma = soma + parseInt(cpf.substring(i - 1, i)) * (11 - i)
+        resto = (soma * 10) % 11
+        if ((resto == 10) || (resto == 11)) resto = 0
+        if (resto != parseInt(cpf.substring(9, 10))) return false
+        soma = 0
+        for (var i = 1; i <= 10; i++)
+            soma = soma + parseInt(cpf.substring(i - 1, i)) * (12 - i)
+        resto = (soma * 10) % 11
+        if ((resto == 10) || (resto == 11)) resto = 0
+        if (resto != parseInt(cpf.substring(10, 11))) return false
+        return true
+    }
+
+    function ValidCNPJ(val) {
+        if (val.length == 14) {
+            var cpf = val.trim();
+
+            cpf = cpf.replace(/\./g, '');
+            cpf = cpf.replace('-', '');
+            cpf = cpf.split('');
+
+            var v1 = 0;
+            var v2 = 0;
+            var aux = false;
+
+            for (var i = 1; cpf.length > i; i++) {
+                if (cpf[i - 1] != cpf[i]) {
+                    aux = true;
+                }
+            }
+
+            if (aux == false) {
+                return false;
+            }
+
+            for (var i = 0, p = 10; (cpf.length - 2) > i; i++, p--) {
+                v1 += cpf[i] * p;
+            }
+
+            v1 = ((v1 * 10) % 11);
+
+            if (v1 == 10) {
+                v1 = 0;
+            }
+
+            if (v1 != cpf[9]) {
+                return false;
+            }
+
+            for (var i = 0, p = 11; (cpf.length - 1) > i; i++, p--) {
+                v2 += cpf[i] * p;
+            }
+
+            v2 = ((v2 * 10) % 11);
+
+            if (v2 == 10) {
+                v2 = 0;
+            }
+
+            if (v2 != cpf[10]) {
+                return false;
+            } else {
+                return true;
+            }
+        } else if (val.length == 18) {
+            var cnpj = val.trim();
+
+            cnpj = cnpj.replace(/\./g, '');
+            cnpj = cnpj.replace('-', '');
+            cnpj = cnpj.replace('/', '');
+            cnpj = cnpj.split('');
+
+            var v1 = 0;
+            var v2 = 0;
+            var aux = false;
+
+            for (var i = 1; cnpj.length > i; i++) {
+                if (cnpj[i - 1] != cnpj[i]) {
+                    aux = true;
+                }
+            }
+
+            if (aux == false) {
+                return false;
+            }
+
+            for (var i = 0, p1 = 5, p2 = 13; (cnpj.length - 2) > i; i++, p1--, p2--) {
+                if (p1 >= 2) {
+                    v1 += cnpj[i] * p1;
+                } else {
+                    v1 += cnpj[i] * p2;
+                }
+            }
+
+            v1 = (v1 % 11);
+
+            if (v1 < 2) {
+                v1 = 0;
+            } else {
+                v1 = (11 - v1);
+            }
+
+            if (v1 != cnpj[12]) {
+                return false;
+            }
+
+            for (var i = 0, p1 = 6, p2 = 14; (cnpj.length - 1) > i; i++, p1--, p2--) {
+                if (p1 >= 2) {
+                    v2 += cnpj[i] * p1;
+                } else {
+                    v2 += cnpj[i] * p2;
+                }
+            }
+
+            v2 = (v2 % 11);
+
+            if (v2 < 2) {
+                v2 = 0;
+            } else {
+                v2 = (11 - v2);
+            }
+
+            if (v2 != cnpj[13]) {
+                return false;
+            } else {
+                return true;
+            }
+        } else {
+            return false;
+        }
+    }
+
+    function ValidPHONE(phone) {
+        var regex = new RegExp('^((1[1-9])|([2-9][0-9]))((3[0-9]{3}[0-9]{4})|(9[0-9]{3}[0-9]{5}))$');
+        return regex.test(phone);
+    }
+
     const pix = (params) => {
         $("#pix").unmask();
-        if (isNumeric($("#pix").val())) {
-            if ($("#pix").val().length < 11) {
-                $("#pix").mask("999.999.999-99");
-            } else {
-                $("#pix").mask("99.999.999/9999-99");
+        if (ValidPHONE($("#pix").val())) {
+            $("#pix").mask("(00) 90000-0000");
+        } else if (ValidCPF($("#pix").val())) {
+            $("#pix").mask("999.999.999-99");
+        } else if (ValidCNPJ($("#pix").val())) {
+            $("#pix").mask("99.999.999/9999-99");
+        } else {
+            if (isNumeric($("#pix").val())) {
+                if (!$("#pix").val().length < 14) {
+                    $("#pix").mask("99.999.999/9999-99");
+                }
             }
         }
-        $("#pix").focus();
+    }
+
+    const valor = (input) => {
+        $(`#${input}`).val(moeda($(`#${input}`).val()));
     }
 
     return (
@@ -43,14 +222,20 @@ const Pix = (props) => {
                     <div className="relative flex justify-center items-center input p-4">
                         <input className='relative px-3 py-2 rounded-t-md outline-none w-full h-full' name="pix" id="pix" type="text" onKeyUp={() => { pix() }} placeholder='E-mail, CPF/CNPJ, Telefone ou aleatória' />
                     </div>
-                    <p>Não tem uma chave?&nbsp;<b>Crie uma agora</b></p>
+                    <p>Não tem uma chave? <b className='cursor-pointer'>Crie uma agora</b></p>
                 </section>
-                <section className='hide relative flex justify-center items-center flex-col text-4xl font-black h-full valor'>
+                <section className='hidden relative flex justify-center items-center flex-col text-4xl font-black h-full valor'>
+                    <h2 className='relative mb-2'>Valor</h2>
+                    <div className="relative flex justify-center items-center input p-4 my-2">
+                        <b className='font-black text-2xl md:text-3xl lg:text-4xl tracking-wider'>R$</b>
+                        <input className='relative px-3 py-2 rounded-t-md outline-none text-center w-full h-full' name="pix_value" id="pix_value" onKeyUp={() => { valor('pix_value') }} type="tel" placeholder='0,00' />
+                    </div>
+                    <p>Limite Disponível: <b>R$ 5.000,00</b></p>
                 </section>
             </main>
             <section className='relative p-2 actions'>
                 {/* <h2 className='relative mb-2 px-2 text-xl font-bold'>Sugestões</h2> */}
-                <ul className="relative flex justify-around flex-wrap items-center flex-row w-full ease-in-out duration-300">
+                <ul className="relative flex justify-around flex-wrap items-center flex-row w-full ease-in-out duration-300 overflow-hidden">
                     <li className='relative lg:scale-110 ease-in-out duration-300 opacity-70 hover:opacity-100'>
                         <i className="material-icons">qr_code_scanner</i>
                         Ler QrCode

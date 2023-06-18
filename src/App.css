@@ -7,6 +7,10 @@
     font-family: 'Mitr', sans-serif;
 }
 
+::selection {
+    background: #1f71bd;
+}
+
 ::-webkit-scrollbar {
     /* width: 0;
     height: 0; */
@@ -44,4 +48,10 @@ body {
     min-height: 100svh;
     background: rgba(27, 28, 28, 17);
     color: #fafafa;
+}
+
+i,
+svg,
+span.material-icons {
+    user-select: none !important;
 }

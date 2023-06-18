@@ -34,60 +34,60 @@ article.pix.openned main section {
     border-bottom: 2px solid #6b6b6b2a;
 }
 
-article.pix.openned main section div.input {
+article.pix.openned main section.chave div.input {
     /* background-color: rgb(127, 172, 255); */
     width: 75%;
     height: 50%;
 }
 
 @media(min-width:1px) {
-    article.pix.openned main section div.input input {
+    article.pix.openned main section.chave div.input input {
         font-size: 10pt;
     }
 
-    article.pix.openned main section div.input input::placeholder {
+    article.pix.openned main section.chave div.input input::placeholder {
         font-size: 10pt;
     }
 }
 
 @media(min-width:568px) {
-    article.pix.openned main section div.input input {
+    article.pix.openned main section.chave div.input input {
         font-size: 12pt;
     }
 
-    article.pix.openned main section div.input input::placeholder {
+    article.pix.openned main section.chave div.input input::placeholder {
         font-size: 12pt;
     }
 }
 
 @media(min-width:768px) {
-    article.pix.openned main section div.input input {
+    article.pix.openned main section.chave div.input input {
         font-size: 17pt;
     }
 
-    article.pix.openned main section div.input input::placeholder {
+    article.pix.openned main section.chave div.input input::placeholder {
         font-size: 17pt;
     }
 }
 
 @media(min-width:1024px) {
-    article.pix.openned main section div.input input {
+    article.pix.openned main section.chave div.input input {
         font-size: 22pt;
     }
 
-    article.pix.openned main section div.input input::placeholder {
+    article.pix.openned main section.chave div.input input::placeholder {
         font-size: 22pt;
     }
 }
 
-article.pix.openned main section div.input input {
+article.pix.openned main section.chave div.input input {
     background-color: #30303065;
     color: #fafafa;
     border: none;
     border-bottom: 2px solid #303030;
 }
 
-article.pix.openned main section div.input input::placeholder {
+article.pix.openned main section.chave div.input input::placeholder {
     color: #fafafabd;
 }
 
@@ -100,9 +100,9 @@ article.pix.openned main section p b {
     font-size: 12pt;
 }
 
-article.pix.openned section.actions ul {
+/* article.pix.openned section.actions ul {
     overflow: hidden auto;
-}
+} */
 
 article.pix.openned section.actions ul li {
     min-width: 100px;
@@ -137,4 +137,68 @@ article.pix.openned section.actions ul li i {
 article.pix.openned section.suggestions {
     border-radius: .7rem;
     border-top: 2px solid #6b6b6b2a;
+}
+
+
+
+/* PIX VALUE */
+
+
+
+article.pix.openned main section.valor div.input {
+    min-width: 25%;
+    max-width: 75%;
+    width: auto;
+    height: 30%;
+    border-bottom: 2px solid #303030;
+}
+
+@media(min-width:1px) {
+    article.pix.openned main section.valor div.input input {
+        font-size: 14pt;
+    }
+
+    article.pix.openned main section.valor div.input input::placeholder {
+        font-size: 14pt;
+    }
+}
+
+@media(min-width:568px) {
+    article.pix.openned main section.valor div.input input {
+        font-size: 16pt;
+    }
+
+    article.pix.openned main section.valor div.input input::placeholder {
+        font-size: 16pt;
+    }
+}
+
+@media(min-width:768px) {
+    article.pix.openned main section.valor div.input input {
+        font-size: 18pt;
+    }
+
+    article.pix.openned main section.valor div.input input::placeholder {
+        font-size: 18pt;
+    }
+}
+
+@media(min-width:1024px) {
+    article.pix.openned main section.valor div.input input {
+        font-size: 22pt;
+    }
+
+    article.pix.openned main section.valor div.input input::placeholder {
+        font-size: 22pt;
+    }
+}
+
+article.pix.openned main section.valor div.input input {
+    background: none;
+    color: #fafafa;
+    border: none;
+}
+
+article.pix.openned main section.valor div.input input::placeholder {
+    color: #fafafabd;
 }
