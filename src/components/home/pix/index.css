@@ -149,11 +149,11 @@ article.pix.openned main section.valor div.input {
     min-width: 25%;
     max-width: 75%;
     width: auto;
-    height: 30%;
+    height: 40%;
     border-bottom: 2px solid #303030;
 }
 
-@media(min-width:1px) {
+@media screen and (min-width:1px) {
     article.pix.openned main section.valor div.input input {
         font-size: 14pt;
     }
@@ -163,7 +163,7 @@ article.pix.openned main section.valor div.input {
     }
 }
 
-@media(min-width:568px) {
+@media screen and (min-width:568px) {
     article.pix.openned main section.valor div.input input {
         font-size: 16pt;
     }
@@ -173,7 +173,7 @@ article.pix.openned main section.valor div.input {
     }
 }
 
-@media(min-width:768px) {
+@media screen and (min-width:768px) {
     article.pix.openned main section.valor div.input input {
         font-size: 18pt;
     }
@@ -183,7 +183,7 @@ article.pix.openned main section.valor div.input {
     }
 }
 
-@media(min-width:1024px) {
+@media screen and (min-width:1024px) {
     article.pix.openned main section.valor div.input input {
         font-size: 22pt;
     }
@@ -201,4 +201,14 @@ article.pix.openned main section.valor div.input input {
 
 article.pix.openned main section.valor div.input input::placeholder {
     color: #fafafabd;
+}
+
+
+
+
+
+article.pix.openned main section div.input button i {
+    color: rgb(42, 190, 42);
+    font-weight: 900;
+    -webkit-filter: drop-shadow(0px 0px 7px rgba(0, 0, 0, .7)) !important;
 }

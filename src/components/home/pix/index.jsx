@@ -184,6 +184,15 @@ const Pix = (props) => {
     }
 
     const pix = (params) => {
+        if ($("#pix").val().length >= 8) {
+            $("section.chave .continuarPix").fadeIn();
+            if (params.key == "Enter") {
+                $("section.chave").hide();
+                $("section.valor").css("display", "flex").hide().fadeIn();
+            }
+        } else {
+            $("section.chave .continuarPix").fadeOut();
+        }
         $("#pix").unmask();
         if (ValidPHONE($("#pix").val())) {
             $("#pix").mask("(00) 90000-0000");
@@ -219,8 +228,9 @@ const Pix = (props) => {
             <main className='relative p-2'>
                 <section className='relative flex justify-center items-center flex-col text-4xl font-black h-full chave'>
                     <h2 className='relative mb-2'>Insira a chave pix</h2>
-                    <div className="relative flex justify-center items-center input p-4">
-                        <input className='relative px-3 py-2 rounded-t-md outline-none w-full h-full' name="pix" id="pix" type="text" onKeyUp={() => { pix() }} placeholder='E-mail, CPF/CNPJ, Telefone ou aleatória' />
+                    <div className="relative flex justify-center items-center flex-col input p-4">
+                        <input className='relative px-3 py-2 rounded-t-md outline-none w-full h-full' name="pix" id="pix" type="text" onKeyUp={(e) => { pix(e) }} placeholder='E-mail, CPF/CNPJ, Telefone ou aleatória' />
+                        <button className='hidden absolute flex items-center right-0 outline-none text-center h-full pr-6 continuarPix'><i className="material-icons text-4xl">done</i></button>
                     </div>
                     <p>Não tem uma chave? <b className='cursor-pointer'>Crie uma agora</b></p>
                 </section>
@@ -229,6 +239,7 @@ const Pix = (props) => {
                     <div className="relative flex justify-center items-center input p-4 my-2">
                         <b className='font-black text-2xl md:text-3xl lg:text-4xl tracking-wider'>R$</b>
                         <input className='relative px-3 py-2 rounded-t-md outline-none text-center w-full h-full' name="pix_value" id="pix_value" onKeyUp={() => { valor('pix_value') }} type="tel" placeholder='0,00' />
+                        <button className='hidden absolute flex items-center right-0 outline-none text-center h-full pr-6 continuarPix'><i className="material-icons text-4xl">done</i></button>
                     </div>
                     <p>Limite Disponível: <b>R$ 5.000,00</b></p>
                 </section>
