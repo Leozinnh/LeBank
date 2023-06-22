@@ -82,6 +82,7 @@ aside section.cards h2 {
 
 aside section.cards img {
     -webkit-filter: drop-shadow(0px 0px 7px rgba(0, 0, 0, .2)) !important;
+    user-select: none;
 }
 
 aside section.cards .slide {
