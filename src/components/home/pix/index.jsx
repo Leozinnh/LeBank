@@ -211,6 +211,12 @@ const Pix = (props) => {
 
     const valor = (input) => {
         $(`#${input}`).val(moeda($(`#${input}`).val()));
+        console.log(`${parseFloat($("#LimitePixDisponível").html())}[${$("#LimitePixDisponível").html()}]  <  ${parseFloat($(`#${input}`).val())}[${$(`#${input}`).val()}]   ==   ${(parseFloat($("#LimitePixDisponível").html()) < parseFloat($(`#${input}`).val()))}`);
+        // if(parseFloat($("#LimitePixDisponível").html()) < parseFloat($(`#${input}`).val())){
+        //     return false;
+        // }else{
+        //     $(`#${input}`).val(moeda($(`#${input}`).val()));
+        // }
     }
 
     return (
@@ -241,7 +247,7 @@ const Pix = (props) => {
                         <input className='relative px-3 py-2 rounded-t-md outline-none text-center w-full h-full' name="pix_value" id="pix_value" onKeyUp={() => { valor('pix_value') }} type="tel" placeholder='0,00' />
                         <button className='hidden absolute flex items-center right-0 outline-none text-center h-full pr-6 continuarPix'><i className="material-icons text-4xl">done</i></button>
                     </div>
-                    <p>Limite Disponível: <b>R$ 5.000,00</b></p>
+                    <p>Limite Disponível: <b>R$ <span id="LimitePixDisponível">5.000,00</span></b></p>
                 </section>
             </main>
             <section className='relative p-2 actions'>
