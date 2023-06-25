@@ -248,7 +248,7 @@ const Pix = (props) => {
                         <button className='hidden absolute flex items-center right-0 outline-none text-center h-full pr-6 continuarPix'><i className="material-icons text-4xl">done</i></button>
                     </div>
                     <p>Limite Disponível: <b>R$ <span id="LimitePixDisponível">5.000,00</span></b></p>
-                </section>
+                </section>6666
             </main>
             <section className='relative p-2 actions'>
                 {/* <h2 className='relative mb-2 px-2 text-xl font-bold'>Sugestões</h2> */}
