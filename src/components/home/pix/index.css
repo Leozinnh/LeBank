@@ -134,7 +134,7 @@ article.pix.openned section.actions ul li i {
     border-radius: .5rem;
 }
 
-article.pix.openned section.suggestions {
+article.pix.openned section.suggestions ul {
     border-radius: .7rem;
     border-top: 2px solid #6b6b6b2a;
 }
@@ -149,7 +149,6 @@ article.pix.openned main section.valor div.input {
     min-width: 25%;
     max-width: 75%;
     width: auto;
-    height: 40%;
     border-bottom: 2px solid #303030;
 }
 
@@ -193,7 +192,7 @@ article.pix.openned main section.valor div.input {
     }
 }
 
-article.pix.openned main section.valor div.input input {
+article.pix.openned main section.valor div.input input:is(:focus, :active, :target, *) {
     background: none;
     color: #fafafa;
     border: none;
