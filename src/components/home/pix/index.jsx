@@ -209,14 +209,28 @@ const Pix = (props) => {
         }
     }
 
+    function formatValuePix(value) {
+        return value.replace(/[^\w\s]/gi, '');
+    }
+
+    function filterInt(value) {
+        if (/^(\-|\+)?([0-9]+|Infinity)$/.test(value)) return Number(value);
+        return NaN;
+    };
+
     const valor = (input) => {
         $(`#${input}`).val(moeda($(`#${input}`).val()));
-        console.log(`${parseFloat($("#LimitePixDisponível").html())}[${$("#LimitePixDisponível").html()}]  <  ${parseFloat($(`#${input}`).val())}[${$(`#${input}`).val()}]   ==   ${(parseFloat($("#LimitePixDisponível").html()) < parseFloat($(`#${input}`).val()))}`);
-        // if(parseFloat($("#LimitePixDisponível").html()) < parseFloat($(`#${input}`).val())){
-        //     return false;
-        // }else{
-        //     $(`#${input}`).val(moeda($(`#${input}`).val()));
-        // }
+        var valorDigitado = filterInt(formatValuePix($(`#${input}`).val()));
+        var valorMaximo = filterInt(formatValuePix($("#LimitePixDisponível").html()));
+        // console.log(`valorDigitado: ${valorDigitado}`);
+        // console.log(`valorMaximo: ${valorMaximo}`);
+        if (valorDigitado > valorMaximo) {
+            $(`#${input}`).addClass('shake invalid');
+            setTimeout(() => {
+                console.log("a");
+                $(`#${input}`).removeClass('shake invalid');
+            }, 1000);
+        }
     }
 
     return (
